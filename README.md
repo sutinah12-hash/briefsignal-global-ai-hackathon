@@ -1,5 +1,7 @@
 # BriefSignal
 
+[![Verify prototype](https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon/actions/workflows/ci.yml/badge.svg)](https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon/actions/workflows/ci.yml)
+
 **Walk in informed.** A source-backed, one-page meeting brief built with Tavily.
 
 Enter a company or person, a meeting time, and your goal. BriefSignal researches the preceding 30 days, connects recent developments to your meeting, and prepares discussion questions. Every finding keeps its source excerpt. Excluded evidence stays visible.

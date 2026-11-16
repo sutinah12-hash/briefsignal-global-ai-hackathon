@@ -2,6 +2,8 @@
 
 当前方向是 **Tavily Research Agent**，项目名 **BriefSignal**。选题分析在 `docs/HACKATHON-STRATEGY.zh-CN.md`。
 
+公开仓库：[sutinah12-hash/briefsignal-global-ai-hackathon](https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon)。[GitHub 自动检查](https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon/actions/workflows/ci.yml)覆盖核心测试、类型检查和构建。
+
 ## 打开项目
 
 Windows 双击根目录的 `启动项目.cmd`，等待出现地址后打开 <http://127.0.0.1:5173>。也可以在该文件夹打开终端执行 `npm run dev`。
@@ -29,7 +31,7 @@ API Key 是调用凭据，不代表必然扣现金。实际费用取决于账户
 - `submission/DEMO-SCRIPT.zh-CN.md`：3 分钟演示讲稿。
 - `submission/repository.json`：已核实的公开 GitHub 地址。
 
-比赛 Theme 选择 **Tavily Research Agent**。当前不申报 Bifrost 集成。必须如实保留“尚待真实 API 联调”等状态，只有真实调用核实后才能更新。
+比赛表单先选 Theme **AI Agents & Intelligent Systems**，再在出现的 Problem Statement 中选 **Tavily Research Agent**。额外 Tavily 集成项留空，第二项目选 **NA (not applied)**。当前不申报 Bifrost 集成。必须如实保留“尚待真实 API 联调”等状态，只有真实调用核实后才能更新。表单核对记录在 `submission/FORM-STATUS.md`；目前尚未保存比赛提交。
 
 ## 登录页面里的两个保存按钮
 

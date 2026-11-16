@@ -6,7 +6,12 @@ Status: prepared text; final submission not yet confirmed.
 BriefSignal
 
 ## Primary theme
-Tavily Research Agent
+
+Theme: AI Agents & Intelligent Systems.
+
+Problem Statement (appears after selecting Theme): Tavily Research Agent.
+
+This is a single Tavily-only project. Leave the additional Tavily-integration checkboxes empty and select NA (not applied) for the second project.
 
 ## Optional Bifrost / combined challenge
 Not selected. This prototype uses Tavily and a configurable model endpoint; no Bifrost integration is claimed.
@@ -36,7 +41,9 @@ The key interaction is inspecting both the evidence used and the evidence reject
 OpenAI Codex assisted with implementation, tests and documentation. The Sites Vinext starter is reused infrastructure. BriefSignal's core logic, product UI, fixtures and materials were created for this event on 2026-11-16. No competing project code was copied.
 
 ## Links / uploads
-Use the verified public repository URL in `repository.json` after publication. Upload `BriefSignal-pitch.pptx` or `BriefSignal-pitch.pdf` according to the form's accepted formats. The one-page sample is `BriefSignal-sample-brief.pdf`. A deployed application and demonstration video are optional under the supplied instructions.
+Public repository: https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon
+
+Upload `BriefSignal-pitch.pptx` or `BriefSignal-pitch.pdf` according to the form's accepted formats. The one-page sample is `BriefSignal-sample-brief.pdf`. A deployed application and demonstration video are optional under the supplied instructions. Exact form labels and the pending save status are recorded in `FORM-STATUS.md`.
 
 ## Final gate
 Before submitting: perform a real provider run or keep the limitations fully disclosed; verify the repo is public; check deck/download links; confirm team details; and record the actual saved/submitted receipt. Do not mark this file submitted merely because it is committed to GitHub.
