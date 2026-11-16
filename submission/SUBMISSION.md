@@ -43,6 +43,10 @@ OpenAI Codex assisted with implementation, tests and documentation. The Sites Vi
 ## Links / uploads
 Public repository: https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon
 
+Recorded demo: https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon/blob/main/submission/BriefSignal-demo.webm
+
+The 56-second captioned recording shows real UI interactions with the explicitly labeled fictional example. It does not establish live-provider operation.
+
 Upload `BriefSignal-pitch.pptx` or `BriefSignal-pitch.pdf` according to the form's accepted formats. The one-page sample is `BriefSignal-sample-brief.pdf`. A deployed application and demonstration video are optional under the supplied instructions. Exact form labels and the pending save status are recorded in `FORM-STATUS.md`.
 
 ## Final gate

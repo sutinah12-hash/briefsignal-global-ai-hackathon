@@ -56,6 +56,8 @@ Tavily currently offers a free monthly allowance without a credit card. Eligible
 
 Official references: [Tavily free-plan limits](https://help.tavily.com/articles/8298987937-billing-credits-usage-limits), [ChatGPT API credits benefit](https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions).
 
+A separate free-tier candidate is Gemini 3.1 Flash-Lite. Google's [pricing page](https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-flash-lite) lists free-tier input/output, and its [OpenAI compatibility guide](https://ai.google.dev/gemini-api/docs/openai) documents the `https://generativelanguage.googleapis.com/v1beta/openai` endpoint. Account eligibility, current quotas and actual BriefSignal output still need verification before use. Do not enable paid billing for a zero-spend demo. Free-tier content may be used to improve Google products; use public or synthetic meeting context.
+
 ## Why this is useful
 
 The output is organized around a conversation rather than a collection of search links:
@@ -125,6 +127,7 @@ These are contract and regression checks, not an independent quality benchmark. 
 
 ## Submission materials
 
+- [56-second product walkthrough](submission/BriefSignal-demo.webm) — real UI interactions, English captions, fictional demo, zero provider calls
 - [Pitch deck](submission/BriefSignal-pitch.pptx)
 - [Pitch deck PDF](submission/BriefSignal-pitch.pdf)
 - [One-page sample](submission/BriefSignal-sample-brief.pdf) — fictional, labeled demonstration
@@ -133,6 +136,8 @@ These are contract and regression checks, not an independent quality benchmark. 
 - [Validation record](docs/VALIDATION.md)
 
 The official event does not require a deployed application. This repository supplies a reproducible local prototype. Hosting and the final competition submission must be confirmed separately; a public repository is not a submission receipt.
+
+The walkthrough shows source inspection, exclusions, the research trail, local saving, and Markdown export. It is a UI demonstration, not evidence of live-provider validation. To record it again, run the local server, install Playwright's FFmpeg with `PLAYWRIGHT_BROWSERS_PATH` set to `work/playwright-browsers`, then run `node scripts/record-demo.mjs`. Chrome is required; captions are recording overlays and do not change the app.
 
 ## Technologies and authorship
 
