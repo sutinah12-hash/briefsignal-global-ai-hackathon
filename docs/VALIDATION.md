@@ -26,6 +26,9 @@ The browser suite verifies source inspection, all three demo exclusion reasons, 
 - Broad cases with namesakes, ambiguous publication dates, and contradictory reports.
 - Provider rate-limit behavior and final billing reconciliation.
 - Multi-user hosted operation and distributed quotas.
-- Competition submission receipt.
+
+## Competition submission
+
+Final submission was confirmed on 2026-11-17 (Asia/Shanghai). The actual PPTX upload, Save and final Submit for Evaluation requests returned HTTP 200. Reloaded details show Under Review and confirm receipt of the final submission. The uploaded PPTX was downloaded from the platform and matched the final local file exactly. See [the structured receipt](../submission/SUBMISSION-RECEIPT.json) and [form verification](../submission/FORM-STATUS.md). This verifies receipt, not an evaluation outcome.
 
 No accuracy, time-saving, adoption, or cost-saving percentages are claimed from these tests.

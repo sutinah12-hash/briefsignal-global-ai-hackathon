@@ -143,7 +143,7 @@ These are contract and regression checks, not an independent quality benchmark. 
 - [Three-minute demo script](submission/DEMO-SCRIPT.zh-CN.md)
 - [Validation record](docs/VALIDATION.md)
 
-The official event does not require a deployed application. This repository supplies a reproducible local prototype. Hosting and the final competition submission must be confirmed separately; a public repository is not a submission receipt.
+The official event does not require a deployed application. This repository supplies a reproducible local prototype. The final competition submission was received and verified as **Under Review** on 2026-11-17 (Asia/Shanghai); see the [submission receipt](submission/SUBMISSION-RECEIPT.json) and [verified form status](submission/FORM-STATUS.md). A hosted deployment is not claimed.
 
 The walkthrough shows source inspection, exclusions, the research trail, local saving, and Markdown export. It is a UI demonstration, not evidence of live-provider validation. To record it again, run the local server, install Playwright's FFmpeg with `PLAYWRIGHT_BROWSERS_PATH` set to `work/playwright-browsers`, then run `node scripts/record-demo.mjs`. Chrome is required; captions are recording overlays and do not change the app.
 

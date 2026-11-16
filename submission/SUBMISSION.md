@@ -1,6 +1,6 @@
 # HackCulture submission copy
 
-Status: prepared text; final submission not yet confirmed.
+Status: final submission received; Under Review. Verified after reload on 2026-11-17 (Asia/Shanghai). See [the receipt](SUBMISSION-RECEIPT.json).
 
 ## Project name
 BriefSignal
@@ -47,7 +47,7 @@ Recorded demo: https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon
 
 The 56-second captioned recording shows real UI interactions with the explicitly labeled fictional example. It does not establish live-provider operation.
 
-Upload `BriefSignal-pitch.pptx` or `BriefSignal-pitch.pdf` according to the form's accepted formats. The one-page sample is `BriefSignal-sample-brief.pdf`. A deployed application and demonstration video are optional under the supplied instructions. Exact form labels and the pending save status are recorded in `FORM-STATUS.md`.
+`BriefSignal-pitch.pptx` was uploaded and its download from the platform matched the final local file exactly. The matching PDF and the one-page `BriefSignal-sample-brief.pdf` remain available in this repository. A deployed application and demonstration video are optional under the supplied instructions. Verified form details and final status are recorded in [FORM-STATUS.md](FORM-STATUS.md).
 
-## Final gate
-Before submitting: perform a real provider run or keep the limitations fully disclosed; verify the repo is public; check deck/download links; confirm team details; and record the actual saved/submitted receipt. Do not mark this file submitted merely because it is committed to GitHub.
+## Final submission
+The form was saved, its fields and attachment were verified after reload, and Submit for Evaluation was confirmed. The server returned `under_review`; another reload displayed Under Review and Submitted. Submission ID: `6afb9362aee0b1d442344fb3`. The platform confirms receipt of the final submission; organizer evaluation is pending.

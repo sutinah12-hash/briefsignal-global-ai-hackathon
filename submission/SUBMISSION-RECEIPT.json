@@ -1,0 +1,33 @@
+{
+  "project": "BriefSignal",
+  "event": "Global AI Hackathon",
+  "phase": "Problem Statements & Prototype Submission",
+  "submissionId": "6afb9362aee0b1d442344fb3",
+  "status": "under_review",
+  "displayStatus": "Under Review",
+  "confirmation": "Under Review: Your final submission has been received and is under review.",
+  "submittedAtUtc": "2026-11-16T23:38:37.792000Z",
+  "verifiedAtUtc": "2026-11-16T23:39:39.214Z",
+  "theme": "AI Agents & Intelligent Systems",
+  "problemStatement": "Tavily Research Agent",
+  "additionalTavilyIntegration": [],
+  "secondProject": "NA (not applied)",
+  "repository": "https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon",
+  "sourceCommitAtSubmission": "a5e03910547321ec9fbe775e923e1f915050728d",
+  "demoVideo": "https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon/blob/main/submission/BriefSignal-demo.webm",
+  "pitch": {
+    "filename": "BriefSignal-pitch.pptx",
+    "bytes": 1134787,
+    "sha256": "146ee9264f2dec0352fdfce0286fad0a033e2475e7189a9aa4a10b97cf7e8211",
+    "downloadedFromPlatformAndMatched": true
+  },
+  "verification": {
+    "uploadHttpStatus": 200,
+    "saveHttpStatus": 200,
+    "finalSubmitHttpStatus": 200,
+    "persistedAfterReload": true,
+    "editButtonAbsent": true,
+    "submitButtonReplacedBySubmitted": true
+  },
+  "formUrl": "https://hackculture.io/my-events/manage/6af82a03a04278f9e9e6dea2?tab=submissions"
+}

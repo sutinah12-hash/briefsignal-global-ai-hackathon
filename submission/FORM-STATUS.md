@@ -1,36 +1,43 @@
-# HackCulture form inspection
+# HackCulture submission status
 
-Inspected while signed in on 2026-11-16. **Final submission is not yet saved.**
+**Final submission received; status: Under Review.** Verified after reloading the signed-in form on 2026-11-17 (Asia/Shanghai).
 
 Target: https://hackculture.io/my-events/manage/6af82a03a04278f9e9e6dea2?tab=submissions
 
-Required fields: Theme, Problem Statement (revealed after choosing Theme), Project Title, Github link of the Project.
+Submission ID: `6afb9362aee0b1d442344fb3`.
 
-Additional fields: Demo Video Link, PPT File, optional Tavily integration checkboxes (Pre-Meeting Briefing Agent / Stale-Answer Detector), and optional fields for a second project.
+Final-submit server timestamp: `2026-11-16T23:38:37.792000Z` (2026-11-17 07:38:37 Asia/Shanghai).
 
-The expanded form was verified in a second signed-in inspection:
+Platform confirmation: "Under Review: Your final submission has been received and is under review."
+
+The saved details were verified after reload:
 
 - Theme: `AI Agents & Intelligent Systems` (the only category).
 - Problem Statement: `Tavily Research Agent` (one of six options; appears after choosing the category).
 - Project Title: `BriefSignal`.
 - Github link: `https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon`.
-- Additional Tavily integration: leave empty. The supplied event instructions reserve this optional field for a combined project whose primary problem statement is Bifrost; this project already selects Tavily as its primary problem.
-- Second project: `NA (not applied)`; leave second-project materials empty.
-- Pitch: `BriefSignal-pitch.pptx` (with matching PDF available).
-- Demo Video Link: `https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon/blob/main/submission/BriefSignal-demo.webm`. This is a 56-second recorded UI walkthrough using the labeled fictional demo, not a live API run. Verify the public file is accessible before saving the form.
+- Additional Tavily integration: empty. The supplied event instructions reserve this optional field for a combined project whose primary problem statement is Bifrost; this project already selects Tavily as its primary problem.
+- Second project: `NA (not applied)`; second-project materials empty.
+- Pitch: `BriefSignal-pitch.pptx`, uploaded as an actual file, 1,134,787 bytes.
+- Demo Video Link: `https://github.com/sutinah12-hash/briefsignal-global-ai-hackathon/blob/main/submission/BriefSignal-demo.webm`. This is a 56-second recorded UI walkthrough using the labeled fictional demo, not a live API run.
 
-The other five Problem Statement choices are: Build a Coding Agent That Gets the Job Done on the Fewest Tokens; Build a Benchmarking Platform for AI Agents, Not Just Models; Build an Agent That Pentests a Target on Its Own; Open-Source Bifrost Gateway; Build a Stale-Answer Detector for AI Applications.
+## Verified completion
 
-The form has one Save button and does not visibly distinguish draft from final submission. Treat a successful save as a potentially consequential competition submission and verify the persisted state after reload.
+1. File upload returned HTTP 200 and displayed "File uploaded successfully".
+2. Save returned HTTP 200 and created a Pending record. Saving alone does not enter the project into evaluation.
+3. After reload, View More showed the correct theme, problem statement, repository, video, uploaded pitch and second-project selection.
+4. The uploaded pitch was downloaded from HackCulture's storage and matched the final local deck byte-for-byte: SHA256 `146ee9264f2dec0352fdfce0286fad0a033e2475e7189a9aa4a10b97cf7e8211`.
+5. Submit for Evaluation was confirmed. The final-submit endpoint returned HTTP 200 with status `under_review`.
+6. After another reload, the page displayed Under Review and Submitted. The Edit and Submit for Evaluation buttons were absent; the details confirmed receipt of the final submission.
 
-Current confirmed deadline in the signed-in form: 21 November 2026, 11:59 PM (event timezone IST; 22 November 2026, 02:29 Asia/Shanghai).
+See [SUBMISSION-RECEIPT.json](SUBMISSION-RECEIPT.json) for the structured receipt. It contains no account credentials or login data.
 
-No explicit PPT type/size limit was visible. The final photo-led PPTX is about 1.13 MB and the matching eight-page PDF is about 2.85 MB.
+The submitted source was public at commit `a5e03910547321ec9fbe775e923e1f915050728d`, with passing GitHub CI. The final visual deck was published in commit `5eb1aa858979a7b260bd0781c16ffd98b701ea3b`.
 
-Real company and person pipeline runs are now complete using Tavily and a verified free-tier Gemini project. The deck now includes licensed workplace photographs and actual live product captures. Final materials are published. Remaining: complete the renewed login verification, upload the actual pitch deck, save the form and verify persistence after reload. No OpenAI promotional grant or paid purchase is claimed.
+The final confirmation states that submissions cannot be edited after this step. The project is awaiting organizer evaluation; no acceptance, shortlist or award is claimed.
 
-## Latest submission attempt
+## Event timing and materials
 
-The final source and eight-slide visual deck were published. Commit `5eb1aa858979a7b260bd0781c16ffd98b701ea3b` passed GitHub CI, and the public PPTX download matched the local file exactly (1,134,787 bytes). A subsequent setup-example update, `76ce9b3f59936a5f8a1e3420465f08ef01723f0e`, also passed CI.
+Confirmed deadline in the signed-in form: 21 November 2026, 11:59 PM (event timezone IST; 22 November 2026, 02:29 Asia/Shanghai).
 
-The automated save attempt on 2026-11-16 was blocked by Google's two-factor verification while signing back into HackCulture. The submissions page was not reached, no deck was uploaded, and Save was not clicked. A manual secure login session was opened so the account owner can complete verification. After that login state is saved, continue the upload/save workflow and verify the persisted form. Do not treat the public repository or completed materials as a submission receipt.
+The file input accepts PDF, PPT, PPTX, PNG and JPEG. The final eight-slide PPTX uses licensed workplace photographs and actual live product captures. Its matching PDF is also available in the repository. Real company and person pipeline runs completed using Tavily and a verified free-tier Gemini project. No OpenAI promotional grant or paid purchase is claimed.
