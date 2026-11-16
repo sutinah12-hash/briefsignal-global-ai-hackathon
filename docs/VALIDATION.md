@@ -14,9 +14,12 @@ Run date: 2026-11-16. Platform: Windows, Node 24.18, Chrome headless.
 
 The browser suite verifies source inspection, all three demo exclusion reasons, Markdown download, saving and deleting a local brief, restoration after reload, no horizontal mobile overflow, missing-key guidance, and visible provider errors. Initial hydration is now explicitly marked; controls remain inert until React is ready.
 
+## Live provider checks
+
+- Real Tavily Search and Extract returned HTTP 200. Search returned three dated sources; Extract returned one page and zero failures. Provider responses reported 1 and 0 credits respectively. See [the live record](LIVE-VALIDATION.md). Rate-limit behavior, complete end-to-end operation and final account billing reconciliation remain unverified.
+
 ## Not yet validated
 
-- Real Tavily credentials, extraction availability, rate limits, and billed usage.
 - Real model schema behavior and semantic grounding quality.
 - Real companies/persons with namesakes, ambiguous publication dates, and contradictory reports.
 - Multi-user hosted operation and distributed quotas.

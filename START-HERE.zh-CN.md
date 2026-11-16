@@ -24,6 +24,8 @@ API Key 是调用凭据，不代表必然扣现金。实际费用取决于账户
 
 2026-11-16 已登录核查 ChatGPT 和 API Platform：当前账号没有显示 API 额度领取入口，也没有已到账赠送额度。不要为了这个原型充值。正在核查的替代方案是 Gemini 3.1 Flash-Lite 免费层；[官方价格](https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-flash-lite)列出免费输入和输出，但账号配额和项目联调尚未验证。免费层内容可能用于改进 Google 产品，演示只使用公开或虚构的会议信息。
 
+本机 Tavily 密钥已经配置，自动升级和按量付费均已关闭并复查。真实 Search 和 Extract 接口均已成功返回；服务分别报告 1 和 0 credits。Gemini 免费项目已创建，但 Google 拦截了自动创建密钥，需要在安全连接页面手动点 Create API key，项目选 BriefSignal Hackathon。不要启用账单或把密钥发到聊天。完整简报生成仍未完成真实联调。
+
 ## 提交材料
 
 - `submission/BriefSignal-demo.webm`：56 秒实际界面操作演示，英文字幕、无声，明确标注虚构示例，零 API 调用。

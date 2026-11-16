@@ -35,7 +35,7 @@ React/TypeScript interface → streamed server endpoint → Tavily Search → da
 The key interaction is inspecting both the evidence used and the evidence rejected. BriefSignal applies a meeting-relative time window, avoids future information, shows uncertainty rather than filling gaps, and connects every discussion starter to an accepted source. Its explicit demo/live separation makes the prototype easy to inspect without misrepresenting generated examples as live research.
 
 ## Validation and current limitations
-16 offline core/pipeline tests, 3 browser scenarios, TypeScript checks and the production build passed. The printable sample is one A4 page. Live provider validation is pending configuration. The demo company is fictional. Citation validation checks provenance, not independent truth or semantic entailment. No real-world accuracy or time-saving percentage is claimed.
+16 offline core/pipeline tests, 3 browser scenarios, TypeScript checks and the production build passed. The printable sample is one A4 page. Real Tavily Search and Extract probes passed; full pipeline and model validation remain pending a usable model credential. The demo company is fictional. Citation validation checks provenance, not independent truth or semantic entailment. No real-world accuracy or time-saving percentage is claimed.
 
 ## AI assistance and reused components
 OpenAI Codex assisted with implementation, tests and documentation. The Sites Vinext starter is reused infrastructure. BriefSignal's core logic, product UI, fixtures and materials were created for this event on 2026-11-16. No competing project code was copied.

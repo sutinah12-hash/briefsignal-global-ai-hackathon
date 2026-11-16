@@ -14,7 +14,7 @@ Enter a company or person, a meeting time, and your goal. BriefSignal researches
 
 Implemented and locally validated: responsive UI, Tavily Search/Extract adapter, OpenAI-compatible model adapter, streamed progress, date filtering, citation and quote validation, source inspection, browser-local saved briefs, Markdown/JSON export, and one-page A4 printing.
 
-**Live provider validation is pending user-supplied API credentials.** The included Northstar Robotics example is fictional. Its source domains are reserved `.example` domains. Demo mode makes zero external API calls and is visibly labeled; a failed live request never silently becomes a demo. Automated pipeline tests use controlled HTTP responses. They do not establish real-world retrieval accuracy or live model quality.
+**Live validation is partial:** real Tavily Search and Extract probes passed on 2026-11-16; full pipeline and model validation remain pending a usable model credential. The included Northstar Robotics example is fictional. Its source domains are reserved `.example` domains. Demo mode makes zero external API calls and is visibly labeled; a failed live request never silently becomes a demo. Automated pipeline tests use controlled HTTP responses. They do not establish real-world retrieval accuracy or live model quality. See the [live validation record](docs/LIVE-VALIDATION.md) for observed results and limitations.
 
 Local checks on 2026-11-16: 16 core/pipeline tests, 3 browser scenarios, TypeScript validation, and production build passed. The exported sample brief is one A4 page. See [validation](docs/VALIDATION.md).
 
