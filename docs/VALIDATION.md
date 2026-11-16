@@ -10,6 +10,7 @@ Run date: 2026-11-16. Platform: Windows, Node 24.18, Chrome headless.
 - `submission/BriefSignal-sample-brief.pdf`: one A4 page, generated from the actual app print stylesheet.
 - Pitch deck: 8 slides; package integrity, slide geometry, font policy and re-import checks passed. All slides visually inspected; screenshots embedded, not linked. PDF generated from the inspected slide renders. Native PowerPoint application behavior was not tested.
 - Recorded walkthrough: 56.2 seconds, 1440 × 1000, VP9/WebM, English captions, no audio. Real browser interactions completed with zero live research requests and zero browser page errors. Full playback completed in Chrome without media errors; title, source, exclusion, export and decoded video frames were visually inspected. This explicitly labeled fictional demonstration is not a live provider run.
+- Windows artifact write regression: generated `submission/` and `work/` files are excluded from development source watching. The development API returned HTTP 200 while a newly created video-path probe was held with an exclusive Windows file lock, and again after release. TypeScript checks passed after the watcher configuration change.
 
 The browser suite verifies source inspection, all three demo exclusion reasons, Markdown download, saving and deleting a local brief, restoration after reload, no horizontal mobile overflow, missing-key guidance, and visible provider errors. Initial hydration is now explicitly marked; controls remain inert until React is ready.
 
