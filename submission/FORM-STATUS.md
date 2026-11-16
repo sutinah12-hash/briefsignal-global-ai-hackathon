@@ -1,6 +1,6 @@
 # HackCulture form inspection
 
-Inspected while signed in on 2026-11-16. No submission was saved during inspection.
+Inspected while signed in on 2026-11-16. **Final submission is not yet saved.**
 
 Target: https://hackculture.io/my-events/manage/6af82a03a04278f9e9e6dea2?tab=submissions
 
@@ -27,4 +27,10 @@ Current confirmed deadline in the signed-in form: 21 November 2026, 11:59 PM (ev
 
 No explicit PPT type/size limit was visible. The final photo-led PPTX is about 1.13 MB and the matching eight-page PDF is about 2.85 MB.
 
-Real company and person pipeline runs are now complete using Tavily and a verified free-tier Gemini project. The deck now includes licensed workplace photographs and actual live product captures. Remaining: publish the final materials, upload the actual pitch deck, save the form and verify persistence after reload. No OpenAI promotional grant or paid purchase is claimed.
+Real company and person pipeline runs are now complete using Tavily and a verified free-tier Gemini project. The deck now includes licensed workplace photographs and actual live product captures. Final materials are published. Remaining: complete the renewed login verification, upload the actual pitch deck, save the form and verify persistence after reload. No OpenAI promotional grant or paid purchase is claimed.
+
+## Latest submission attempt
+
+The final source and eight-slide visual deck were published. Commit `5eb1aa858979a7b260bd0781c16ffd98b701ea3b` passed GitHub CI, and the public PPTX download matched the local file exactly (1,134,787 bytes). A subsequent setup-example update, `76ce9b3f59936a5f8a1e3420465f08ef01723f0e`, also passed CI.
+
+The automated save attempt on 2026-11-16 was blocked by Google's two-factor verification while signing back into HackCulture. The submissions page was not reached, no deck was uploaded, and Save was not clicked. A manual secure login session was opened so the account owner can complete verification. After that login state is saved, continue the upload/save workflow and verify the persisted form. Do not treat the public repository or completed materials as a submission receipt.
