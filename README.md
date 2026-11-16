@@ -14,9 +14,9 @@ Enter a company or person, a meeting time, and your goal. BriefSignal researches
 
 Implemented and locally validated: responsive UI, Tavily Search/Extract adapter, OpenAI-compatible model adapter, streamed progress, date filtering, citation and quote validation, source inspection, browser-local saved briefs, Markdown/JSON export, and one-page A4 printing.
 
-**Live validation is partial:** real Tavily Search and Extract probes passed on 2026-11-16; full pipeline and model validation remain pending a usable model credential. The included Northstar Robotics example is fictional. Its source domains are reserved `.example` domains. Demo mode makes zero external API calls and is visibly labeled; a failed live request never silently becomes a demo. Automated pipeline tests use controlled HTTP responses. They do not establish real-world retrieval accuracy or live model quality. See the [live validation record](docs/LIVE-VALIDATION.md) for observed results and limitations.
+**Live pipeline verified on two case types:** company (OpenAI) and person (Sam Altman) browser runs completed through Tavily Search, Extract, Gemini synthesis, citation checks, and PDF export on 2026-11-16. Latest observed runs took 12.1 and 9.0 seconds respectively; these are examples, not a performance guarantee. Earlier timeout/HTTP 503 failures and semantic limitations are documented in the [live validation record](docs/LIVE-VALIDATION.md). The included Northstar Robotics demo is fictional, uses reserved `.example` domains, and makes zero external API calls. A failed live request never silently becomes a demo. Offline automated tests use controlled HTTP responses and are not a retrieval-quality benchmark.
 
-Local checks on 2026-11-16: 16 core/pipeline tests, 3 browser scenarios, TypeScript validation, and production build passed. The exported sample brief is one A4 page. See [validation](docs/VALIDATION.md).
+Local checks on 2026-11-16: 17 core/pipeline tests, 3 browser scenarios, TypeScript validation, and production build passed. Both real-case PDFs and the fictional sample are one A4 page. See [validation](docs/VALIDATION.md).
 
 ## Start locally
 
@@ -48,6 +48,12 @@ The default model configuration uses an OpenAI-compatible Chat Completions endpo
 
 For a network-exposed installation, set `BRIEF_API_TOKEN` and enter it in the Connections dialog. The token is kept in tab memory. The local prototype is not a complete public multi-tenant service: add durable rate limits, user authentication, and per-user quotas before public hosting with funded keys.
 
+### Local VPN / HTTP proxy for Gemini
+
+If Google API requests time out on your development machine, create the ignored `.briefsignal.local.json` with `{"proxyUrl":"http://127.0.0.1:YOUR_PROXY_PORT","modelPort":8790}`. Set `LLM_BASE_URL="http://127.0.0.1:8790/v1beta/openai"` in `.dev.vars`, keep your Gemini key and model settings, then restart `npm run dev`. Use your VPN application's actual HTTP proxy port.
+
+The optional development bridge listens only on `127.0.0.1`, forwards only the Gemini Chat Completions route, and sends upstream requests over HTTPS through your existing local proxy. It does not log or store credentials. It runs only in local development, not in the production build. For direct access or deployment, use Google's HTTPS base URL and omit the local proxy file. Search/extraction requests have 45-second timeouts and model generation has a 90-second timeout; no automatic retries are performed.
+
 ### Cost and free credits
 
 Demo and offline tests consume no API credits. A successful live run makes at most three basic Tavily searches, one Extract request containing at most three URLs, and one model call. No automatic retries are implemented. Provider-reported credit and token usage appears in the research trail; unavailable usage is never estimated as zero.
@@ -56,7 +62,7 @@ Tavily currently offers a free monthly allowance without a credit card. Eligible
 
 Official references: [Tavily free-plan limits](https://help.tavily.com/articles/8298987937-billing-credits-usage-limits), [ChatGPT API credits benefit](https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions).
 
-A separate free-tier candidate is Gemini 3.1 Flash-Lite. Google's [pricing page](https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-flash-lite) lists free-tier input/output, and its [OpenAI compatibility guide](https://ai.google.dev/gemini-api/docs/openai) documents the `https://generativelanguage.googleapis.com/v1beta/openai` endpoint. Account eligibility, current quotas and actual BriefSignal output still need verification before use. Do not enable paid billing for a zero-spend demo. Free-tier content may be used to improve Google products; use public or synthetic meeting context.
+The real runs used Gemini 3.1 Flash-Lite in a verified Free-tier project without paid billing. Google's [pricing page](https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-flash-lite) lists free-tier input/output, and its [OpenAI compatibility guide](https://ai.google.dev/gemini-api/docs/openai) documents the `https://generativelanguage.googleapis.com/v1beta/openai` endpoint. Quotas and eligibility depend on your account. Do not enable paid billing for a zero-spend demo. Free-tier content may be used to improve Google products; use public or synthetic meeting context.
 
 ## Why this is useful
 
@@ -131,6 +137,8 @@ These are contract and regression checks, not an independent quality benchmark. 
 - [Pitch deck](submission/BriefSignal-pitch.pptx)
 - [Pitch deck PDF](submission/BriefSignal-pitch.pdf)
 - [One-page sample](submission/BriefSignal-sample-brief.pdf) — fictional, labeled demonstration
+- [Actual live company brief](submission/BriefSignal-live-company.pdf) — captured model output; review cited sources before relying on individual claims
+- [Photo and screenshot credits](docs/IMAGE-CREDITS.md)
 - [Submission text](submission/SUBMISSION.md)
 - [Three-minute demo script](submission/DEMO-SCRIPT.zh-CN.md)
 - [Validation record](docs/VALIDATION.md)

@@ -1,10 +1,12 @@
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { readExecutionProfile } from "./execution-profile.mjs";
+import { startLocalModelProxy } from "./local-model-proxy.mjs";
 
 const [command, ...args] = process.argv.slice(2);
 if (!["dev", "build"].includes(command)) throw new Error("Expected dev or build.");
 const managedLinux = readExecutionProfile() === "managed-linux";
+if (command === "dev" && !managedLinux) await startLocalModelProxy();
 
 if (managedLinux && command === "build") {
   const result = spawnSync("bash", [

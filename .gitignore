@@ -29,6 +29,7 @@ yarn-error.log*
 # Local environment and keys
 .env*
 .dev.vars*
+.briefsignal.local.json
 *.pem
 
 # Checkout-local tool state

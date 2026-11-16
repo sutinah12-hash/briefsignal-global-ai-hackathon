@@ -15,16 +15,18 @@ Windows 双击根目录的 `启动项目.cmd`，等待出现地址后打开 <htt
 密钥填在本机的 `.dev.vars`，不要发到聊天或上传 GitHub。
 
 1. [Tavily 控制台](https://app.tavily.com/home)：使用免费 Researcher 计划，保持 pay-as-you-go 关闭，取得 API Key，填写 `TAVILY_API_KEY`。
-2. [ChatGPT 设置](https://chatgpt.com/#settings)：Billing 中查看 API credits benefit。符合条件的 Pro 需要主动激活，核实关联的 API organization、已到账额度和有效期。
-3. 在正确的 API organization 创建项目 API Key，填写 `LLM_API_KEY`。不要启用自动充值，也不要购买额度。
-4. 默认 `LLM_BASE_URL` 和 `LLM_MODEL` 使用 OpenAI 兼容配置；如使用其他服务，需同时更改。
+2. 本项目已使用 [Google AI Studio](https://aistudio.google.com/apikey) 的 Gemini 免费项目。新安装者需要自己的密钥，并核实项目未关联付费账单。
+3. 设置 `LLM_API_KEY`、`LLM_MODEL="gemini-3.1-flash-lite"`，直连时 `LLM_BASE_URL="https://generativelanguage.googleapis.com/v1beta/openai"`。不要购买额度或启用自动充值。
+4. 本机 VPN 代理方案见下文；其他 OpenAI 兼容服务也可配置，但需独立核实其免费额度和参数兼容性。
 5. 重启项目。页面右上角 Connections 显示服务已配置后，输入真实对象生成简报。
 
 API Key 是调用凭据，不代表必然扣现金。实际费用取决于账户额度和计费设置。这个应用不能读取你的免费余额，因此需要先在账户页面确认。
 
-2026-11-16 已登录核查 ChatGPT 和 API Platform：当前账号没有显示 API 额度领取入口，也没有已到账赠送额度。不要为了这个原型充值。正在核查的替代方案是 Gemini 3.1 Flash-Lite 免费层；[官方价格](https://ai.google.dev/gemini-api/docs/pricing#gemini-3.1-flash-lite)列出免费输入和输出，但账号配额和项目联调尚未验证。免费层内容可能用于改进 Google 产品，演示只使用公开或虚构的会议信息。
+2026-11-16 已登录核查 ChatGPT 和 API Platform：当前账号没有显示 API 额度领取入口，也没有已到账赠送额度。项目已改用 Gemini 3.1 Flash-Lite，核实所用项目为免费层、未关联付费账单，并完成真实调用。免费层内容可能用于改进 Google 产品，演示只使用公开或虚构的会议信息。
 
-本机 Tavily 密钥已经配置，自动升级和按量付费均已关闭并复查。真实 Search 和 Extract 接口均已成功返回；服务分别报告 1 和 0 credits。Gemini 免费项目已创建，但 Google 拦截了自动创建密钥，需要在安全连接页面手动点 Create API key，项目选 BriefSignal Hackathon。不要启用账单或把密钥发到聊天。完整简报生成仍未完成真实联调。
+本机 Tavily 和 Gemini 密钥都已配置。Tavily 自动升级和按量付费均已关闭并复查。OpenAI 公司与 Sam Altman 人物两个完整浏览器场景均已成功：最新实测约 12.1 秒和 9.0 秒，分别由 Tavily 报告 3 和 4 credits。这只是两次实例，不保证每次速度；也遇到过模型超时和 HTTP 503。引用仍需人工核对语义与日期，详细记录在 `docs/LIVE-VALIDATION.md`。
+
+已在本机发现可用 HTTP 代理 `127.0.0.1:7892`。忽略上传的 `.briefsignal.local.json` 保存代理配置，`npm run dev` 或双击启动脚本会自动启动本机 Gemini 桥接。请保持现有 VPN 开启；代理端口变更时修改该文件。项目没有修改系统代理或 VPN 设置。
 
 ## 提交材料
 
@@ -32,11 +34,12 @@ API Key 是调用凭据，不代表必然扣现金。实际费用取决于账户
 - `submission/BriefSignal-pitch.pptx`：8 页可编辑路演稿。
 - `submission/BriefSignal-pitch.pdf`：便于上传的 PDF 版本。
 - `submission/BriefSignal-sample-brief.pdf`：一页输出示例，明确标注为虚构演示。
+- `submission/BriefSignal-live-company.pdf`：真实公司场景的一页输出，保留模型实际生成结果和来源，使用前核查具体事实。
 - `submission/SUBMISSION.md`：英文填表文案。
 - `submission/DEMO-SCRIPT.zh-CN.md`：3 分钟演示讲稿。
 - `submission/repository.json`：已核实的公开 GitHub 地址。
 
-比赛表单先选 Theme **AI Agents & Intelligent Systems**，再在出现的 Problem Statement 中选 **Tavily Research Agent**。额外 Tavily 集成项留空，第二项目选 **NA (not applied)**。当前不申报 Bifrost 集成。必须如实保留“尚待真实 API 联调”等状态，只有真实调用核实后才能更新。表单核对记录在 `submission/FORM-STATUS.md`；目前尚未保存比赛提交。
+比赛表单先选 Theme **AI Agents & Intelligent Systems**，再在出现的 Problem Statement 中选 **Tavily Research Agent**。额外 Tavily 集成项留空，第二项目选 **NA (not applied)**。当前不申报 Bifrost 集成。表单核对与实际保存状态记录在 `submission/FORM-STATUS.md`；公开仓库和演示文件本身不等于比赛提交回执。
 
 ## 登录页面里的两个保存按钮
 

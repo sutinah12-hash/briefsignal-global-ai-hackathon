@@ -1,5 +1,11 @@
 import { test, expect } from '@playwright/test';
-test.beforeEach(async ({page}) => { await page.goto('/'); await expect(page.locator('[data-hydrated="true"]')).toBeVisible(); });
+test.beforeEach(async ({page}) => {
+  // Browser regression checks must never consume a developer's configured API quota.
+  await page.route('**/api/brief', route => route.request().method() === 'GET'
+    ? route.fulfill({ json: { liveReady: false, tavilyConfigured: false, modelConfigured: false, tokenRequired: false } })
+    : route.fulfill({ status: 503, json: { error: 'Offline browser test: provider calls disabled.' } }));
+  await page.goto('/'); await expect(page.locator('[data-hydrated="true"]')).toBeVisible();
+});
 test('desktop demo, source inspection, exclusions, export, and saved brief', async ({ page }) => {
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await expect(page.getByRole('heading',{name:'Walk in informed.'})).toBeVisible();

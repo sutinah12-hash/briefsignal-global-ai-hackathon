@@ -25,6 +25,6 @@ The form has one Save button and does not visibly distinguish draft from final s
 
 Current confirmed deadline in the signed-in form: 21 November 2026, 11:59 PM (event timezone IST; 22 November 2026, 02:29 Asia/Shanghai).
 
-No explicit PPT type/size limit was visible. The prepared PPTX is about 273 KB and the matching PDF is about 396 KB.
+No explicit PPT type/size limit was visible. The final photo-led PPTX is about 1.13 MB and the matching eight-page PDF is about 2.85 MB.
 
-Remaining before final submission: verify real provider operation, upload the actual pitch deck, and record the saved result. After authentication, both ChatGPT billing and API Platform billing were inspected; no API-credit activation option or active grant was observed. No grant activation, paid purchase, or billing change is confirmed. Free-tier model setup is being checked before making real API calls.
+Real company and person pipeline runs are now complete using Tavily and a verified free-tier Gemini project. The deck now includes licensed workplace photographs and actual live product captures. Remaining: publish the final materials, upload the actual pitch deck, save the form and verify persistence after reload. No OpenAI promotional grant or paid purchase is claimed.
