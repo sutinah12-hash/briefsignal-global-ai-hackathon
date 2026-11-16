@@ -1,0 +1,10 @@
+import { chromium } from '@playwright/test';
+import fs from 'node:fs/promises';
+await fs.mkdir('submission',{recursive:true}); await fs.mkdir('docs/images',{recursive:true});
+const browser=await chromium.launch({channel:'chrome',headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:1000},timezoneId:'Asia/Shanghai'});
+await page.goto('http://127.0.0.1:5173');await page.locator('[data-hydrated="true"]').waitFor();
+await page.screenshot({path:'docs/images/product-overview.png'});
+await page.pdf({path:'submission/BriefSignal-sample-brief.pdf',format:'A4',printBackground:true,preferCSSPageSize:true});
+await page.getByRole('tab',{name:/Evidence/}).click(); await page.screenshot({path:'docs/images/evidence-overview.png'});
+await browser.close();console.log('Captured product screenshots and printable sample.');

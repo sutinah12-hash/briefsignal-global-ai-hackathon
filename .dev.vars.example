@@ -1,0 +1,8 @@
+# Copy to .dev.vars (never commit that file), then restart npm run dev.
+TAVILY_API_KEY=
+LLM_API_KEY=
+# An OpenAI-compatible chat completions endpoint. Change both values for another provider.
+LLM_BASE_URL=https://api.openai.com/v1
+LLM_MODEL=gpt-4.1-mini
+# Local prototype only. Set a private token before exposing the app publicly.
+BRIEF_API_TOKEN=
