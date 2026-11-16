@@ -44,7 +44,7 @@ notepad .dev.vars
 npm run dev
 ```
 
-The default model configuration uses an OpenAI-compatible Chat Completions endpoint with JSON-object output. The selected model must support `response_format: {type: "json_object"}`, `temperature`, and `max_tokens`. Other providers can be configured with a compatible base URL and model. Keys are read only on the server; never commit `.dev.vars` or `.env` files. `OPENAI_API_KEY` is accepted as a server-side fallback if `LLM_API_KEY` is unset.
+The example configuration uses Gemini 3.1 Flash-Lite through Google's OpenAI-compatible Chat Completions endpoint. The selected model must support `response_format: {type: "json_object"}`, `temperature`, and `max_tokens`. Other providers can be configured with a compatible base URL and model. Keys are read only on the server; never commit `.dev.vars` or `.env` files. `OPENAI_API_KEY` is accepted as a server-side fallback if `LLM_API_KEY` is unset.
 
 For a network-exposed installation, set `BRIEF_API_TOKEN` and enter it in the Connections dialog. The token is kept in tab memory. The local prototype is not a complete public multi-tenant service: add durable rate limits, user authentication, and per-user quotas before public hosting with funded keys.
 

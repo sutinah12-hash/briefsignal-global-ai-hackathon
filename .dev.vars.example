@@ -1,8 +1,9 @@
 # Copy to .dev.vars (never commit that file), then restart npm run dev.
 TAVILY_API_KEY=
 LLM_API_KEY=
-# An OpenAI-compatible chat completions endpoint. Change both values for another provider.
-LLM_BASE_URL=https://api.openai.com/v1
-LLM_MODEL=gpt-4.1-mini
+# Tested with a verified Gemini Free-tier project. Confirm your own billing/quotas.
+# This is Google's OpenAI-compatible endpoint; change both values for another provider.
+LLM_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai
+LLM_MODEL=gemini-3.1-flash-lite
 # Local prototype only. Set a private token before exposing the app publicly.
 BRIEF_API_TOKEN=
